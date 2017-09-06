@@ -19,7 +19,7 @@ function onReady(){
         $.ajax({
             type: 'POST',
             url: '/served',
-            data: $(':selected').val(),
+            data: {message: $(':selected').val()},
             success: function(response){
                 console.log('Turn on the AC', response);
             }

@@ -33,6 +33,6 @@ app.get( '/served', function( req, res){
 });
 
 app.post( '/served', function(req, res){
-  console.log('posting your serve mf', req.body);
+  console.log('posting your serve mf', req.body.message);
   res.send('posting your serve mf with heat');
 })
