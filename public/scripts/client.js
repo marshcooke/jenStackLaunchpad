@@ -3,9 +3,9 @@ console.log( 'js' );
 $(document).ready(onReady);
 
 function onReady(){
-    $('#requestButton').on('click', clickButton);
+    // $('#requestButton').on('click', clickButton);
 
-    function clickButton(){
+    // function clickButton(){
         $.ajax({
             type: 'GET',
             url: '/served',
@@ -13,5 +13,5 @@ function onReady(){
                 console.log('In success', response);
             }
         });
-    };
+    // };
 }
