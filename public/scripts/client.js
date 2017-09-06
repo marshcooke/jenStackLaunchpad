@@ -10,7 +10,7 @@ function onReady(){
             type: 'GET',
             url: '/served',
             success: function(response){
-                console.log('In success', response);
+                $('main').append($('<p>').text(response.count));
             }
         });
     // };

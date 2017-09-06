@@ -23,5 +23,6 @@ var serviceCounter = 0;
 app.get( '/served', function( req, res){
   serviceCounter++
   console.log('servicing your serve', serviceCounter);
-  res.send('YOU GOT SERVED!' + serviceCounter);
+  var responseService = {count: serviceCounter}; 
+  res.send(responseService);
 })
