@@ -4,7 +4,7 @@ $(document).ready(onReady);
 
 function onReady(){
     // $('#requestButton').on('click', clickButton);
-
+    $('#hotbutton').on('click', howHot);
     // function clickButton(){
         $.ajax({
             type: 'GET',
@@ -14,4 +14,15 @@ function onReady(){
             }
         });
     // };
+
+    function howHot(){
+        $.ajax({
+            type: 'POST',
+            url: '/served',
+            data: $(':selected').val(),
+            success: function(response){
+                console.log('Turn on the AC', response);
+            }
+        });
+    }
 }
