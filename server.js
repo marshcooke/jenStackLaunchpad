@@ -18,7 +18,10 @@ app.get( '/', function( req, res ){
   res.sendFile( path.resolve( 'views/index.html' ) );
 }); // end base url
 
+var serviceCounter = 0;
+
 app.get( '/served', function( req, res){
-  console.log('servicing your serve');
-  res.send('YOU GOT SERVED!');
+  serviceCounter++
+  console.log('servicing your serve', serviceCounter);
+  res.send('YOU GOT SERVED!' + serviceCounter);
 })
